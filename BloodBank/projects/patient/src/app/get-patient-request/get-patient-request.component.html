@@ -1,0 +1,33 @@
+<div class="main">
+    <table class="table" border="2" rules="all">
+      <!-- <img src="" alt="" srcset=""> -->
+      <thead>
+        <tr>
+          <th>PatientRequest Id</th>
+          <th >PatientRequest Units</th>
+          <th >PatientRequest On Date</th>
+          <th >Patient Medical Condition</th>
+          <!-- <th>Status</th> -->
+        </tr>
+      </thead>
+       <tbody>
+
+        <tr *ngFor="let patient of request">
+         <td>{{patient.patient_request_id}}</td>
+         <td>{{patient.patient_request_units}}</td>
+         <td>{{patient.patient_request_on_date}}</td>
+         <td>{{patient.patient_medical_condition}}</td>
+         <!-- <td>{{patient.status}}</td> -->
+          <td>
+            <button class="button" type="submit"  >edit</button>
+            <button class="button" type="submit" (click)="delete(patient.patient_request_id)">
+              <a routerLink="/getPatient" class="btn-delete">
+                delete
+              </a>
+              </button>
+        </td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>

@@ -1,0 +1,28 @@
+<div class="image">
+<img src="https://png.pngtree.com/thumb_back/fh260/back_our/20190619/ourmid/pngtree-geometric-gradient-creative-blood-donation-poster-background-material-image_134137.jpg"  height="750px" width="100%" srcset="">
+<div class="heading">
+<h1>Patient Request Information</h1>
+</div>
+    <form #frmRegister="ngForm" (submit)="SendRequest(frmRegister.value)">
+    <table class="main">
+        <!-- <img src="https://cdn.downtoearth.org.in/library/large/2018-04-04/0.64315300_1522832897_7413610060_317879301e_z.jpg" alt=""> -->
+       <tr>Patient Medical Condition</tr>
+       <tr><input type="text" class="input" [(ngModel)]="request.patient_medical_condition" name="patient_medical_condition"></tr>
+       <tr>Patient Request On date</tr>
+       <tr><input type="date" class="input" [(ngModel)]="request.patient_request_on_date" name="patient_request_on_date"></tr>
+       <tr>Patient Request Units</tr>
+       <tr ><input type="number" class="input" [(ngModel)]="request.patient_request_units" name="patient_request_units"></tr>
+       <!-- <tr>Status</tr> -->
+       <!-- <tr>
+        <input type="text" [(ngModel)]="request.status" name="status">
+       </tr> -->
+       <input type="submit" value="Submit" class="button" routerLink="/patientRequesting">
+       <!-- <button>save</button> -->
+    </table>
+</form>
+
+<!-- {{frmRegister.value.patient_medical_condition}} -->
+    
+    <!-- <video src="https://cdnl.iconscout.com/lottie/premium/preview-watermark/woman-donating-blood-at-blood-bank-8704126-7017073.mp4"></video> -->
+
+</div>

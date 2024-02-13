@@ -1,0 +1,34 @@
+<div class="container-fluid">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th >Name</th>
+          <th >Age</th>
+          <th >Salaty</th>
+          <th>Buttons</th>
+        </tr>
+      </thead>
+       <tbody>
+
+        <tr *ngFor="let emp of employee">
+         <td>{{emp.employeeId}}</td>
+         <td>{{emp.employeeName}}</td>
+         <td>{{emp.emploeeAge}}</td>
+         <td>{{emp.salary}}</td>
+          <td>
+            <button class="btn btn-primary " type="submit"  >edit</button>
+            <button class="btn btn-danger m-4" type="submit" (click)="deleteStudent(emp.employeeId)">
+              <a routerLink="/GetEmployee" class="btn-delete">
+                delete
+              </a>
+              </button>
+        </td>
+
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+
